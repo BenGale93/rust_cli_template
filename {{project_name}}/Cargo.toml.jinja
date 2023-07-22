@@ -1,0 +1,33 @@
+[package]
+authors = ["Ben Askew-Gale <bengale2007@googlemail.com>"]
+name = "{{project_name}}"
+categories = ["command-line-utilities"]
+description = ""
+keywords = []
+readme = "./README.md"
+repository = ""
+version = "0.1.0"
+edition = "2021"
+license = "Apache-2.0"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[[bin]]
+name = "{{binary_name}}"
+path = "src/bin/{{binary_name}}/main.rs"
+
+[lib]
+name = "{{binary_name}}"
+path = "src/{{binary_name}}/lib.rs"
+
+[dependencies]
+clap = { version = "4.3.0", features = ["derive"] }
+colored = "2.0.0"
+confy = "0.5.1"
+log = "0.4.19"
+pretty_env_logger = "0.5.0"
+serde = { version = "1.0.163", features = ["serde_derive"] }
+thiserror = "1.0.40"
+
+[dev-dependencies]
+rstest = "0.17.0"

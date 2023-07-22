@@ -1,0 +1,4 @@
+project_name:
+  type: str
+binary_name:
+  type: str
