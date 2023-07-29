@@ -1,4 +1,8 @@
 #![warn(clippy::all, clippy::nursery)]
 pub mod error;
 
-pub mod prelude {}
+pub mod prelude {
+    use crate::error::InternalError;
+
+    pub type Result<T> = core::result::Result<T, InternalError>;
+}

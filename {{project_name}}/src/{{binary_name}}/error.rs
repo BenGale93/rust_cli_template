@@ -1,5 +1,5 @@
 #[derive(thiserror::Error, Debug)]
-pub enum ToDoError {
+pub enum InternalError {
     #[error("Generic error: {0}")]
     Generic(String),
 
